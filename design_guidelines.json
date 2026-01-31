@@ -1,0 +1,155 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "SoftFocus",
+      "archetype": "The Calm Achiever",
+      "vibe": "Serene, Organized, Tactile, Flow-state",
+      "principles": [
+        "Soft over Sharp: rounded-2xl and rounded-3xl are the default.",
+        "Depth over Flatness: Use subtle shadows and blur to create hierarchy.",
+        "Content is King: The dashboard is a frame; the data is the art.",
+        "Breathing Room: High padding (p-6, p-8) to reduce cognitive load."
+      ]
+    },
+    "typography": {
+      "font_family": {
+        "heading": "Poppins, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-3xl md:text-4xl font-semibold tracking-tight",
+        "h2": "text-xl md:text-2xl font-medium tracking-tight",
+        "h3": "text-lg font-medium",
+        "body": "text-sm md:text-base leading-relaxed text-gray-600 dark:text-gray-300",
+        "caption": "text-xs font-medium text-gray-400 uppercase tracking-wider"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#6C5CE7",
+          "foreground": "#FFFFFF",
+          "soft": "#A29BFE",
+          "100": "#E0DVF9",
+          "900": "#342E70"
+        },
+        "secondary": {
+          "DEFAULT": "#00CEC9",
+          "foreground": "#FFFFFF",
+          "soft": "#81ECEC",
+          "100": "#Dffbfb"
+        },
+        "accent": {
+          "DEFAULT": "#FF7675",
+          "foreground": "#FFFFFF",
+          "soft": "#FAB1A0"
+        },
+        "background": {
+          "light": "#F9F9FB",
+          "dark": "#18181B",
+          "card_light": "#FFFFFF",
+          "card_dark": "#27272A"
+        },
+        "text": {
+          "main": "#2D3436",
+          "muted": "#636E72",
+          "dark_main": "#FAFAFA",
+          "dark_muted": "#A1A1AA"
+        }
+      },
+      "usage": {
+        "dashboard_bg": "bg-[#F9F9FB] dark:bg-[#18181B]",
+        "card_bg": "bg-white dark:bg-[#27272A]",
+        "sidebar_bg": "bg-white/80 dark:bg-[#27272A]/80 backdrop-blur-xl border-r border-gray-100 dark:border-gray-800"
+      }
+    },
+    "layout": {
+      "grid_system": "Bento Grid (Asymmetric)",
+      "spacing": {
+        "container_padding": "p-6 md:p-8 lg:p-10",
+        "card_padding": "p-6",
+        "gap": "gap-6"
+      },
+      "border_radius": {
+        "outer": "rounded-3xl",
+        "inner": "rounded-2xl",
+        "button": "rounded-xl"
+      },
+      "shadows": {
+        "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+        "hover": "shadow-[0_20px_40px_rgb(0,0,0,0.08)]",
+        "inner": "shadow-inner"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-[#6C5CE7] hover:bg-[#5849c2] text-white shadow-lg shadow-indigo-500/20 transition-all hover:-translate-y-0.5 active:translate-y-0",
+        "secondary": "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700",
+        "ghost": "text-gray-500 hover:text-[#6C5CE7] hover:bg-indigo-50 dark:hover:bg-indigo-900/20"
+      },
+      "cards": {
+        "base": "bg-white dark:bg-[#27272A] rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-gray-800 transition-all hover:shadow-md",
+        "interactive": "cursor-pointer hover:border-[#6C5CE7]/30 hover:shadow-[0_8px_30px_rgb(108,92,231,0.1)]"
+      },
+      "inputs": {
+        "base": "bg-gray-50 dark:bg-gray-900 border-transparent focus:border-[#6C5CE7] focus:ring-2 focus:ring-[#6C5CE7]/20 rounded-xl h-12 px-4 transition-all"
+      }
+    },
+    "assets": {
+      "images": {
+        "user_profile": "https://images.unsplash.com/photo-1765648636065-fd5c0884b629?crop=entropy&cs=srgb&fm=jpg&w=200&h=200&fit=crop",
+        "course_covers": [
+          {
+            "category": "Design",
+            "url": "https://images.unsplash.com/photo-1767473907132-9e52351d023a?crop=entropy&cs=srgb&fm=jpg&w=800&q=80"
+          },
+          {
+            "category": "Development",
+            "url": "https://images.unsplash.com/photo-1759031807407-68c066e63bbf?crop=entropy&cs=srgb&fm=jpg&w=800&q=80"
+          },
+          {
+            "category": "Marketing",
+            "url": "https://images.unsplash.com/photo-1759031807436-bffa8890cc5c?crop=entropy&cs=srgb&fm=jpg&w=800&q=80"
+          }
+        ],
+        "pro_plan_bg": "https://images.unsplash.com/photo-1760278041834-dc1021506a0b?crop=entropy&cs=srgb&fm=jpg&w=800&q=80"
+      },
+      "icons": "Lucide React (Rounded style preferred)"
+    },
+    "motion": {
+      "transitions": "transition-all duration-300 ease-out",
+      "hover_lift": "hover:-translate-y-1",
+      "page_enter": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+    },
+    "accessibility": {
+      "contrast_check": "Ensure text on colored badges uses white or dark text appropriately based on APCA.",
+      "focus_states": "Focus rings must be visible and use the primary color.",
+      "dark_mode": "Ensure sufficient contrast in dark mode; avoid pure black backgrounds."
+    }
+  },
+  "implementation_guide": {
+    "tech_stack": {
+      "frontend": "React (Vite) + Tailwind CSS",
+      "backend": "FastAPI + MongoDB",
+      "icons": "lucide-react",
+      "charts": "recharts (Customized to match Soft UI)",
+      "date_handling": "date-fns"
+    },
+    "file_structure_recommendation": [
+      "src/components/layout/DashboardLayout.jsx",
+      "src/components/widgets/CourseProgressWidget.jsx",
+      "src/components/widgets/TaskTimelineWidget.jsx",
+      "src/components/widgets/StatsCard.jsx",
+      "src/pages/Dashboard.jsx",
+      "src/context/ThemeContext.jsx"
+    ],
+    "universal_rules": [
+      "Do not use default HTML inputs; use styled components.",
+      "Use 'gap-6' or 'gap-8' for main grid layouts.",
+      "Sidebar should be fixed on desktop, drawer on mobile.",
+      "Dark mode toggle is mandatory and must persist state.",
+      "All cards must have 'rounded-2xl' and subtle borders."
+    ]
+  }
+}
